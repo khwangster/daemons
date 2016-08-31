@@ -78,7 +78,7 @@ module Daemons
             exit 3 if not @group.running?   # exit with status 3 to indicate that no apps are running
           else
             $stderr.puts "#{@group.app_name}: no instances running"
-            exit 3                          # exit with status 3 to indicate that no apps are running
+            # exit 3                          # exit with status 3 to indicate that no apps are running
           end
         when nil
           fail CmdException.new('no command given')
